@@ -1,0 +1,37 @@
+.task__container {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    align-items: center;
+    width: 80%;
+    border: 1px solid #61dafb;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+
+.task__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    right: 92px;
+}
+
+.task__text {
+    color: #fff;
+}
+
+.task__input {
+    cursor: pointer;
+}
+
+.task__delete-button {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+    width: 18px;
+    height: 19px;
+    border: none;
+}
+
