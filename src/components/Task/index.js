@@ -1,7 +1,8 @@
-import { DeleteButton } from "../../components/icons/index";
+import React from "react";
 import "./style.css";
+import { DeleteButton } from "../../components/icons/index";
 
-function Task({task, text, onDelete, onToggle }) {
+function Task({ task, text, onDelete, onToggle }) {
 
     const handleDeleteClick = () => {
         onDelete(task.id);
@@ -23,7 +24,7 @@ function Task({task, text, onDelete, onToggle }) {
                         checked={task.completed}
                     />
                 </label>
-                <button className="task__delete-button" onClick={handleDeleteClick}>
+                <button className="task__delete-button" onClick={handleDeleteClick} >
                     <DeleteButton />
                 </button>
             </div>

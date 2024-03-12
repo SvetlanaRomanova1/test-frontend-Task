@@ -1,11 +1,11 @@
-import "./style.css";
+import React from "./style.css";
 import Task from "../Task";
 
-function TaskList({tasks, onDelete, onToggle}) {
+function TaskList({ tasks, onDelete, onToggle, onOpenPopup }) {
 
     const handleDeleteTask = (taskId) => {
-        console.log(handleDeleteTask)
-        onDelete(taskId);
+        // onDelete(taskId);
+        onOpenPopup(taskId); // Добавлен вызов открытия попапа
     };
 
     const handleToggleTask = (taskId) => {
@@ -17,7 +17,13 @@ function TaskList({tasks, onDelete, onToggle}) {
             <p>У вас пока нет задач.</p>
         ) : (
             tasks.map((task) => (
-                <Task key={task.id} task={task} text={task.text} onDelete={handleDeleteTask} onToggle={handleToggleTask}/>
+                <Task
+                    key={task.id}
+                    task={task}
+                    text={task.text}
+                    onDelete={handleDeleteTask}
+                    onToggle={handleToggleTask}
+                />
             ))
         )
     )
