@@ -40,7 +40,6 @@ function App() {
 
     // Открытие popup
     const handleOpenPopup = (taskId) => {
-        console.log({taskId})
         setDeleteTaskId(taskId);
         setShowPopup(true);
     }
